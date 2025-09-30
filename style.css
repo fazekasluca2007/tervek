@@ -1,37 +1,78 @@
 body {
-      background-color: #f0f6fb;
-      color: #2c3e50;
-    }
+  background-color: #f0f6fb;
+  color: #2c3e50;
+}
 
-    .navbar {
-      background-color: #a8cde8;
-    }
+.navbar {
+  background-color: #a8cde8;
+}
 
-    .navbar .nav-link,
-    .navbar .navbar-brand {
-      color: #2c3e50;
-      font-weight: 500;
-    }
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #2c3e50;
+  font-weight: 500;
+}
 
-    .navbar .nav-link:hover {
-      color: #1a3c57;
-    }
+.navbar .nav-link:hover {
+  color: #1a3c57;
+}
 
-    .btn-primary {
-      background-color: #6daedb;
-      border-color: #6daedb;
-      transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    }
+.btn-primary {
+  background-color: #6daedb;
+  border-color: #6daedb;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
 
-    .btn-primary:hover,
-    .btn-primary:active,
-    .btn-primary:focus {
-      background-color: #1a3c57;
-      border-color: #1a3c57 ;
-      transform: scale(1.1);
-    }
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #1a3c57;
+  border-color: #1a3c57 ;
+  transform: scale(1.1);
+}
 
-    footer {
-      background-color: #a8cde8;
-      color: #2c3e50;
-    }
+footer {
+  background-color: #a8cde8;
+  color: #2c3e50;
+}
+
+/* Ország fejlécek */
+.country-banner {
+  background: linear-gradient(90deg, #6daedb, #7dbf7d, #a87c5c);
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+}
+.flag-box img {
+  border-radius: 4px;
+}
+
+/* Slider wrapper */
+.slider-wrapper {
+  position: relative;
+}
+.slider-container {
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.hotel-card {
+  min-width: 25%; /* egyszerre 4 fér ki */
+  box-sizing: border-box;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+.slider-btn.left { left: -20px; }
+.slider-btn.right { right: -20px; }
