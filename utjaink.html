@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utjaink</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigáció -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Utjaink</a>
+    <div>
+      <a class="nav-link d-inline" href="#">Főoldal</a>
+      <a class="nav-link d-inline" href="#">Kapcsolat</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== MAGYARORSZÁG =================== -->
+<div class="container my-5">
+  <div class="country-banner d-flex align-items-center mb-4">
+    <div class="flag-box me-3">
+      <img src="https://flagcdn.com/w40/hu.png" alt="Magyar zászló">
+    </div>
+    <div>
+      <h3 class="mb-1">Magyarország</h3>
+      <p class="fst-italic">"Fedezd fel a szebbnél szebb helyeket ebben az országban."</p>
+    </div>
+  </div>
+
+  <div class="slider-wrapper">
+    <button class="slider-btn left" onclick="moveSlide('hu', -1)">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="slider-hu">
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Budapest</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Debrecen</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Szeged</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Pécs</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Eger</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Győr</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Miskolc</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Sopron</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Kecskemét</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Székesfehérvár</h6></div></div>
+      </div>
+    </div>
+    <button class="slider-btn right" onclick="moveSlide('hu', 1)">&#10095;</button>
+  </div>
+</div>
+
+<!-- =================== OLASZORSZÁG =================== -->
+<div class="container my-5">
+  <div class="country-banner d-flex align-items-center mb-4">
+    <div class="flag-box me-3">
+      <img src="https://flagcdn.com/w40/it.png" alt="Olasz zászló">
+    </div>
+    <div>
+      <h3 class="mb-1">Olaszország</h3>
+      <p class="fst-italic">"Éld át a mediterrán életérzést és fedezd fel Itália kincseit."</p>
+    </div>
+  </div>
+
+  <div class="slider-wrapper">
+    <button class="slider-btn left" onclick="moveSlide('it', -1)">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track" id="slider-it">
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Róma</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Firenze</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Milánó</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Velence</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Nápoly</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Torino</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Verona</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Palermo</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Bari</h6></div></div>
+        <div class="card shadow-sm hotel-card"><img src="https://via.placeholder.com/300x200"><div class="card-body text-center"><h6>Genova</h6></div></div>
+      </div>
+    </div>
+    <button class="slider-btn right" onclick="moveSlide('it', 1)">&#10095;</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-3 mt-5">
+  <p>© 2025 Utjaink - Minden jog fenntartva</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const positions = { hu: 0, it: 0 };
+
+  function moveSlide(country, step) {
+    const track = document.getElementById('slider-' + country);
+    const cards = track.children.length;
+    const visible = 4;
+    const maxPos = cards - visible;
+
+    positions[country] += step;
+    if (positions[country] < 0) positions[country] = 0;
+    if (positions[country] > maxPos) positions[country] = maxPos;
+
+    const movePercent = -(positions[country] * (100 / visible));
+    track.style.transform = `translateX(${movePercent}%)`;
+  }
+</script>
+
+</body>
+</html>
