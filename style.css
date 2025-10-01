@@ -27,8 +27,8 @@ body {
 }
 
 .btn-primary {
-  background-color: #6daedb;
-  border-color: #6daedb;
+  background-color: darkcyan !important;
+  border-color: darkcyan !important;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
@@ -129,4 +129,19 @@ footer {
 .slider-btn.right {
   right: -20px;
 }
+.hover-szin a {
+  transition: color 0.3s ease;
+}
+.hover-szin a:hover {
+  color: darkcyan !important;
+}
+.hover-szin a i {
+  transition: color 0.3s ease !important;
+}
+
+.hover-szin a:hover i {
+  color: darkcyan !important;
+}
+
+
 
