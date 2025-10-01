@@ -13,12 +13,13 @@ body {
   font-weight: 500;
 }
 .navbar-brand img{
-  max-height: 40px;
+  max-height: 35px;
   width: auto;
   transform: scale(2);
   transform-origin: center;
   margin-right: 15px;
   margin-left: 15px;
+  margin-top: 5px;
 }
 
 .navbar .nav-link:hover {
@@ -128,3 +129,4 @@ footer {
 .slider-btn.right {
   right: -20px;
 }
+
