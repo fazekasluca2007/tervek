@@ -66,9 +66,7 @@ footer {
 }
 
 /* Carousel képek enyhe homályosítása és sötétítése */
-.carousel-item img {
-  filter: blur(3px) brightness(0.85);
-}
+
 
 /* Ország fejlécek */
 .country-banner {
