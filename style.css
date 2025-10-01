@@ -13,6 +13,167 @@ body {
   font-weight: 500;
 }
 .navbar-brand img{
+  max-height: 40px;
+  width: auto;
+  transform: scale(2);
+  transform-origin: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.navbar .nav-link:hover {
+  color: #1a3c57;
+}
+
+.btn-primary {
+  background-color: #6daedb;
+  border-color: #6daedb;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #1a3c57;
+  border-color: #1a3c57;
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #a8cde8;
+  color: #2c3e50;
+}
+
+#map {
+  width: 80%;
+  height: 350px;
+  margin: 20px auto;
+  border: 3px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.leaflet-popup-content {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leaflet-popup-content b {
+  color: #2c3e50;
+}
+
+.leaflet-popup-content i {
+  color: #555;
+}
+
+/* Öko szállás popup */
+.eco-popup .leaflet-popup-content-wrapper {
+  background: #e8fce8;
+  border: 2px solid #3ba94d;
+}
+
+
+
+/* Ország fejlécek */
+.country-banner {
+  background: linear-gradient(90deg, #6daedb, #7dbf7d, #a87c5c);
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.flag-box img {
+  border-radius: 4px;
+}
+
+/* Slider wrapper */
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.hotel-card {
+  min-width: 25%;
+  /* egyszerre 4 fér ki */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.hotel-card:hover{
+  transform:scale(1.03);
+}
+
+.card-body{
+  object-fit: cover; /* ne torzuljon */
+  border-radius: 10%;
+  
+}
+
+img{
+  object-fit: cover; /* ne torzuljon */
+  border-radius: 10px;
+  
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color:  #2c3e50;       
+  font-size: 2rem;    
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;         
+}
+
+
+.slider-btn.left {
+  left: -20px;
+}
+
+.slider-btn.right {
+  right: -20px;
+}
+
+.szallaskepek {
+  width: 100%;          /* illeszkedjen a rendelkezésre álló helyhez */
+  max-width: 600px;     /* maximum szélesség */
+  height: 400px;        /* fix magasság */
+  object-fit: cover;    /* kitöltés torzulás nélkül */
+  border-radius: 10px;  /* esztétikus kerekítés */
+  display: block;
+  margin: 0 auto;       /* középre igazítás */
+}
+.zaszlokep{
+  width: 70px;
+  height: 45px;
+}
+body {
+  background-color: #f0f6fb;
+  color: #2c3e50;
+}
+
+.navbar {
+  background-color: #a8cde8;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #2c3e50;
+  font-weight: 500;
+}
+.navbar-brand img{
   max-height: 35px;
   width: auto;
   transform: scale(2);
@@ -109,26 +270,9 @@ footer {
   box-sizing: border-box;
 }
 
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 12px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-}
 
-.slider-btn.left {
-  left: -20px;
-}
 
-.slider-btn.right {
-  right: -20px;
-}
+
 .hover-szin a {
   transition: color 0.3s ease;
 }
@@ -142,6 +286,5 @@ footer {
 .hover-szin a:hover i {
   color: darkcyan !important;
 }
-
 
 
