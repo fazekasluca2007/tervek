@@ -27,8 +27,8 @@ body {
 
 .btn-primary {
   background-color: #6daedb;
-  border-color: #6daedb;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border-color: #6daedb;  
+  transition: 0.3s all; 
 }
 
 .btn-primary:hover,
@@ -106,6 +106,7 @@ footer {
   /* egyszerre 4 fér ki */
   box-sizing: border-box;
   border-radius: 10px;
+  transition: 0.3s all;
 }
 
 .hotel-card:hover{
@@ -121,7 +122,6 @@ footer {
 img{
   object-fit: cover; /* ne torzuljon */
   border-radius: 10px;
-  
 }
 
 .slider-btn {
