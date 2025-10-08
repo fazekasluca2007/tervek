@@ -204,19 +204,33 @@ body {
   color: #1a3c57;
 }
 
-.btn-primary {
+/* 🔹 "Foglalj most" gomb animáció */
+.btn.btn-primary.btn-lg {
   background-color: darkcyan !important;
   border-color: darkcyan !important;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.4s ease;
 }
 
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-  background-color: #1a3c57;
-  border-color: #1a3c57;
-  transform: scale(1.1);
+/* Egér fölé viszve: lassan kinagyul + árnyék */
+.btn.btn-primary.btn-lg:hover {
+  background-color: #1a3c57 !important;
+  border-color: #1a3c57 !important;
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Kattintáskor enyhe "összenyomódás" */
+.btn.btn-primary.btn-lg:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fókusz (pl. tabbal kiválasztva) */
+.btn.btn-primary.btn-lg:focus {
+  background-color: #1a3c57 !important;
+  border-color: #1a3c57 !important;
+}
+
 
 footer {
   background-color: #a8cde8;
