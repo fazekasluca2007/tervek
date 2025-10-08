@@ -3,297 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/foldgomb.png" type="image/x-icon">
-  <title>Utjaink</title>
+  <title>Útjaink</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
- <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="./img/logo.svg" alt="Logo">
-      </a>
+      <a class="navbar-brand" href="index.html"><img src="./img/logo.svg" alt="Logo"></a>
       <a class="nav-link" href="index.html">Bejelentkezés</a>
-
       <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="utjaink.html">Útjaink</a></li>
           <li class="nav-item"><a class="nav-link" href="okoutjaink.html">ÖkoÚtjaink</a></li>
-
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="rolunkDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Rólunk
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="rolunkDropdown" role="button" data-bs-toggle="dropdown">Rólunk</a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="rolunkDropdown">
               <li><a class="dropdown-item" href="gyik.html">Gyakori kérdések</a></li>
               <li><a class="dropdown-item" href="velemenyek.html">Vélemények</a></li>
             </ul>
           </li>
-
         </ul>
       </div>
     </div>
   </nav>
 
-<!-- = MAGYARORSZÁG = -->
-<div class="container my-5">
-  <div class="country-banner d-flex align-items-center mb-4">
-    <div class="flag-box me-3">
-      <img src="img/zaszlok/hu.png" alt="Magyar zászló" class="zaszlokep">
-    </div>
-    <div>
-      <h3 class="mb-1">Magyarország</h3>
-      <p class="fst-italic">„Magyarország a történelem, a kultúra és a vendégszeretet találkozása – ahol minden város egy új történetet mesél, és minden táj egy új élményt kínál.”</p>
-    </div>
+  <div id="countries-container" class="container my-5">
+    <!-- Ide generáljuk a szállásokat JS-ből -->
   </div>
 
-  <div class="slider-wrapper">
-    <button class="slider-btn left" onclick="moveSlide('hu', -1)">&#10094;</button>
-    <div class="slider-container">
-      <div class="slider-track" id="slider-hu">
-        
-        <!-- Budapest kártya -->
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#budapestModal">
-          <img src="img/utjaink kepek/hu_ariahotel.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Budapest</h6><p>Aria Hotel – ★★★★★</p></div>
-        </div>
-
-        <!-- Lillafüred kártya -->
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#lillafureddModal">
-          <img src="img/utjaink kepek/hu_palotaszallo.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Lillafüred</h6><p>Hunguest Hotel Palota ★★★★</p></div>
-        </div>
-
-        <!-- Szeged kártya -->
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#budapestModal">
-          <img src="img/utjaink kepek/hu_danubis.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Budapest</h6><p>Danubius Hotel Helia ★★★★</p></div>
-        </div>
-
-        <!-- Pécs kártya -->
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#pecsModal">
-          <img src="img/utjaink kepek/hu_platinus.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Pécs</h6><p>Palatinus Grand Hotel ★★★★  </p></div>
-        </div>
-
-      </div>
-    </div>
-    <button class="slider-btn right" onclick="moveSlide('hu', 1)">&#10095;</button>
-  </div>
-</div>
-
-<div class="container my-5">
-  <div class="country-banner d-flex align-items-center mb-4">
-    <div class="flag-box me-3">
-      <img src="img/zaszlok/it.png" alt="Olasz zászló" class="zaszlokep">
-    </div>
-    <div>
-      <h3 class="mb-1">Olaszország</h3>
-      <p class="fst-italic">„Olaszország a művészet, a gasztronómia és a dolce vita hazája – ahol minden utca egy festmény, minden étel egy élmény, és minden pillanat egy emlék.”</p>
-    </div>
-  </div>
-
-  <div class="slider-wrapper">
-    <button class="slider-btn left" onclick="moveSlide('hu', -1)">&#10094;</button>
-    <div class="slider-container">
-      <div class="slider-track" id="slider-hu">
-        
-       
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#romaModal">
-          <img src="img/utjaink kepek/it_artemide" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Róma</h6><p>Hotel Artemide ★★★★</p></div>
-        </div>
-
-        
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#toszkanaModal">
-          <img src="img/utjaink kepek/it_lapoggiolina.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Toszkána</h6><p>Agriturismo La Poggiolina ★★★ </p></div>
-        </div>
-
-        
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#napolyModal">
-          <img src="img/utjaink kepek/it_grandhotel.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Nápoly</h6><p>Grand Hotel Vesuvio ★★★★★</p></div>
-        </div>
-
-        
-        <div class="card shadow-sm hotel-card" data-bs-toggle="modal" data-bs-target="#firenzeModal">
-          <img src="img/utjaink kepek/it_hotelnbernini.jpg" alt="" class="szallaskepek">
-          <div class="card-body text-center"><h6>Firenze</h6><p> Hotel Bernini Palace ★★★★★</p></div>
-        </div>
-
-      </div>
-    </div>
-    <button class="slider-btn right" onclick="moveSlide('hu', 1)">&#10095;</button>
-  </div>
-</div>  
-<!--Modalok-->
-<div class="modal fade" id="budapestModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Budapest</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Budapest a főváros, híres a Dunáról, a Parlamentről és a termálfürdőkről.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="lillafureddModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Debrecen</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Debrecen az ország második legnagyobb városa, a Nagytemplomról és virágkarneváljáról híres.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="szegedModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Szeged</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Szeged a napfény városa, a Dóm tér és a halászlé hazája.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="pecsModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Pécs</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Pécs mediterrán hangulatú város, híres a Zsolnay-negyedről és az UNESCO világörökségről.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Olasz-->
-<div class="modal fade" id="romaModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Róma</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo totam quisquam iste harum dicta doloremque ad nostrum, aspernatur a laborum deleniti quos ex autem nemo nihil repellendus enim repellat sequi.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="toszkanaModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Toszkána</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo totam quisquam iste harum dicta doloremque ad nostrum, aspernatur a laborum deleniti quos ex autem nemo nihil repellendus enim repellat sequi.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="napolyModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Nápoly</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo totam quisquam iste harum dicta doloremque ad nostrum, aspernatur a laborum deleniti quos ex autem nemo nihil repellendus enim repellat sequi.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="firenzeModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Firenze</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo totam quisquam iste harum dicta doloremque ad nostrum, aspernatur a laborum deleniti quos ex autem nemo nihil repellendus enim repellat sequi.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#${modalId}">Foglalás</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const positions = { hu: 0 };
-
-  function moveSlide(country, step) {
-    const track = document.getElementById('slider-' + country);
-    const cards = track.children.length;
-    const visible = 3;
-    const maxPos = cards - visible;
-
-    positions[country] += step;
-    if (positions[country] < 0) positions[country] = 0;
-    if (positions[country] > maxPos) positions[country] = maxPos;
-
-    const movePercent = -(positions[country] * (100 / visible));
-    track.style.transform = `translateX(${movePercent}%)`;
-  }
-</script>
-
-   <footer class="text-white mt-5" style="background-color: #a8cde8;">
+  <footer class="text-white mt-5" style="background-color: #a8cde8;">
     <div class="container py-4">
       <div class="row">
-
         <div class="col-md-4 mb-3">
           <h5>Kapcsolat</h5>
           <ul class="list-unstyled">
@@ -302,7 +44,6 @@
             <li>info@ecotrip.hu</li>
           </ul>
         </div>
-
         <div class="col-md-4 mb-3 text-center hover-szin">
           <ul class="list-unstyled">
             <li><a href="utjaink.html" class="text-white text-decoration-none">Útjaink</a></li>
@@ -312,7 +53,6 @@
             <li><a href="velemenyek.html" class="text-white text-decoration-none">Vélemények</a></li>
           </ul>
         </div>
-
         <div class="col-md-4 mb-3 text-md-end hover-szin">
           <h5>Kövess minket!</h5>
           <ul class="list-unstyled">
@@ -320,14 +60,14 @@
             <li><a href="https://instagram.com" target="_blank" class="text-white fs-4"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
-
       </div>
-
       <div class="text-center mt-3">
         <small>&copy; 2025 EcoTrip - Minden jog fenntartva</small>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
