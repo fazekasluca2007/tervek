@@ -191,7 +191,7 @@ body {
   font-weight: 500;
 }
 .navbar-brand img{
-  max-height: 35px;
+  max-height: 50px;
   width: auto;
   transform: scale(2);
   transform-origin: center;
@@ -200,9 +200,17 @@ body {
   margin-top: 5px;
 }
 
-.navbar .nav-link:hover {
+
+.navbar .nav-link {
   color: #1a3c57;
+  transition: color 0.3s ease;
 }
+
+.navbar .nav-link:hover {
+  color:darkcyan; 
+}
+
+
 
 /* 🔹 "Foglalj most" gomb animáció */
 .btn.btn-primary.btn-lg {
@@ -244,6 +252,15 @@ footer {
   border: 3px solid #333;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#foldgomb {
+  transition: transform 0.2s ease; 
+}
+
+#foldgomb:hover {
+  transform: scale(1.1); 
+         
 }
 
 .leaflet-popup-content {
