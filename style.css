@@ -263,6 +263,42 @@ footer {
          
 }
 
+/* Jobb oldali szöveges blokkok */
+.text-block {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.text-block.blue {
+    background: linear-gradient(135deg, darkcyan);
+}
+
+.text-block.green {
+    background: linear-gradient(135deg,#7dbf7d);
+    
+}
+
+.text-block.brown {
+    background: linear-gradient(135deg, #a87c5c);
+}
+
+.text-block p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
 .leaflet-popup-content {
   font-family: 'Arial', sans-serif;
   font-size: 14px;
@@ -498,9 +534,35 @@ footer {
 .team-card img {
   width: 120px;
   height: 120px;
-  object-fit: cover;
-  border: 3px solid #6daedb;
+  
+  border: 3px solid darkcyan;
 }
+
+
+
+.team-card p {
+  display: none;              
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;        
+  margin-top: 10px;           
+}
+
+.team-card:hover p {
+  display: block;            
+  opacity: 1;
+}
+
+
+.team-card {
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+
 
 @media (max-width: 768px) {
   .rolunk-hero h1 {
