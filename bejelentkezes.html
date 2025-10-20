@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,7 @@
 
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
 
-  <div class="card shadow p-4" style="width: 350px;">
+  <div class="card shadow p-4" style="width: 380px;">
     <h2 class="text-center mb-4" id="formTitle">Bejelentkezés</h2>
 
     <!-- Bejelentkezés űrlap -->
@@ -32,17 +31,29 @@
     <!-- Regisztráció űrlap -->
     <form id="registerForm" class="d-none">
       <div class="mb-3">
+        <label for="fullName" class="form-label">Teljes név</label>
+        <input type="text" id="fullName" class="form-control" placeholder="Add meg a teljes neved" required>
+      </div>
+      <div class="mb-3">
         <label for="regUsername" class="form-label">Felhasználónév</label>
-        <input type="text" id="regUsername" class="form-control" required>
+        <input type="text" id="regUsername" class="form-control" placeholder="Válassz felhasználónevet" required>
+      </div>
+      <div class="mb-3">
+        <label for="regEmail" class="form-label">E-mail cím</label>
+        <input type="email" id="regEmail" class="form-control" placeholder="Add meg az e-mail címed" required>
       </div>
       <div class="mb-3">
         <label for="regPassword" class="form-label">Jelszó</label>
-        <input type="password" id="regPassword" class="form-control" required>
+        <input type="password" id="regPassword" class="form-control" placeholder="Írj be egy jelszót" required>
+      </div>
+      <div class="mb-3">
+        <label for="regPassword2" class="form-label">Jelszó ismét</label>
+        <input type="password" id="regPassword2" class="form-control" placeholder="Írd be újra a jelszót" required>
       </div>
       <button type="submit" class="btn btn-success w-100">Regisztráció</button>
     </form>
 
-    <!-- Linkek -->
+    <!-- Link váltás -->
     <p class="text-center mt-3 small">
       <span id="switchText">
         Nincs fiókod? <a href="#" id="showRegister">Regisztrálj be!</a>
@@ -52,5 +63,4 @@
 
   <script src="bejelentkezes.js"></script>
 </body>
-
 </html>
