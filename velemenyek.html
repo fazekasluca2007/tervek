@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
   <meta charset="UTF-8">
@@ -12,26 +12,22 @@
 </head>
 
 <body>
+  <!-- NAVIGÁCIÓ -->
   <nav class="navbar navbar-expand-lg position-relative">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-
-      <!-- Bal oldal -->
       <div class="d-flex align-items-center">
         <a class="navbar-brand" href="index.html">
           <img src="./img/logo.svg" alt="Logo">
         </a>
 
-        <!-- Alapértelmezett bejelentkezés link -->
         <a id="loginLink" class="nav-link ms-2" href="bejelentkezes.html">Bejelentkezés</a>
 
-        <!-- Bejelentkezett felhasználó infó -->
         <div id="userInfo" class="ms-3 d-none text-white">
           <span id="usernameDisplay" class="fw-bold"></span>
           <button id="logoutBtn" class="btn btn-sm btn-outline-light ms-2">Kijelentkezés</button>
         </div>
       </div>
 
-      <!-- Középső rész -->
       <div class="position-absolute start-50 translate-middle-x">
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item"><a class="nav-link" href="utjaink.html">Útjaink</a></li>
@@ -39,7 +35,6 @@
         </ul>
       </div>
 
-      <!-- Jobb oldal -->
       <div class="d-flex">
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item"><a class="nav-link" href="rolunk.html">Rólunk</a></li>
@@ -47,10 +42,10 @@
           <li class="nav-item"><a class="nav-link" href="velemenyek.html">Vélemények</a></li>
         </ul>
       </div>
-
     </div>
   </nav>
 
+  <!-- VÉLEMÉNYEK LISTA -->
   <section class="reviews-section py-5">
     <div class="container">
       <h2 class="text-center mb-5">Utazóink véleményei</h2>
@@ -64,13 +59,35 @@
     </div>
   </section>
 
+  <!-- VÉLEMÉNY ÍRÁSA (csak bejelentkezve látszik) -->
+  <section id="addReviewSection" class="py-5 d-none">
+    <div class="container">
+      <h3 class="text-center mb-4">Írd meg a véleményed</h3>
+      <form id="reviewForm" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label for="reviewText" class="form-label">Véleményed</label>
+          <textarea id="reviewText" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="reviewRating" class="form-label">Értékelés (1–5)</label>
+          <select id="reviewRating" class="form-select" required>
+            <option value="">Válassz...</option>
+            <option value="1">1 – Gyenge</option>
+            <option value="2">2 – Elmegy</option>
+            <option value="3">3 – Jó</option>
+            <option value="4">4 – Nagyon jó</option>
+            <option value="5">5 – Kiváló</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Vélemény elküldése</button>
+      </form>
+    </div>
+  </section>
 
-
-
+  <!-- LÁBLÉC -->
   <footer class="text-white mt-5" style="background-color: #a8cde8;">
     <div class="container py-4">
       <div class="row">
-
         <div class="col-md-4 mb-3">
           <h5>Kapcsolat</h5>
           <ul class="list-unstyled">
@@ -93,13 +110,10 @@
         <div class="col-md-4 mb-3 text-md-end hover-szin">
           <h5>Kövess minket!</h5>
           <ul class="list-unstyled">
-            <li><a href="https://facebook.com" target="_blank" class="text-white fs-4"><i
-                  class="fab fa-facebook"></i></a></li>
-            <li><a href="https://instagram.com" target="_blank" class="text-white fs-4"><i
-                  class="fab fa-instagram"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank" class="text-white fs-4"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" class="text-white fs-4"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
-
       </div>
 
       <div class="text-center mt-3">
@@ -112,5 +126,4 @@
   <script src="velemenyek.js"></script>
   <script src="bejelentkezes.js"></script>
 </body>
-
 </html>

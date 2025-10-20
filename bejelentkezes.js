@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🔁 Váltás bejelentkezés <-> regisztráció
   const toggleForms = (showRegisterForm) => {
+    if (!loginForm || !registerForm) return;
+
     if (showRegisterForm) {
       loginForm.classList.add("d-none");
       registerForm.classList.remove("d-none");
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       switchText.innerHTML = `Nincs fiókod? <a href="#" id="showRegister">Regisztrálj be!</a>`;
     }
 
-    // új események dinamikus linkekhez
+    // új események a dinamikus linkekhez
     document.getElementById("showRegister")?.addEventListener("click", (e) => {
       e.preventDefault();
       toggleForms(true);
@@ -31,13 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Első váltó gomb
-  showRegister.addEventListener("click", (e) => {
+  showRegister?.addEventListener("click", (e) => {
     e.preventDefault();
     toggleForms(true);
   });
 
   // 💡 Bejelentkezés logika
-  loginForm.addEventListener("submit", (e) => {
+  loginForm?.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const username = document.getElementById("username").value.trim();
@@ -51,15 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // 🔐 Mentés
     localStorage.setItem("loggedIn", "true");
     localStorage.setItem("user", JSON.stringify(user));
 
     alert(`Üdv újra, ${user.fullName}!`);
-    window.location.href = "index.html";
+    window.location.href = "velemenyek.html";
   });
 
   // 💚 Regisztráció logika
-  registerForm.addEventListener("submit", (e) => {
+  registerForm?.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const fullName = document.getElementById("fullName").value.trim();
@@ -84,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Mentés
     const newUser = { fullName, username, email, password };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
@@ -94,27 +96,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 💬 Navbar felhasználónév megjelenítés (ha van navbar)
+
+// 💬 Navbar + Vélemény szekció kezelése
 document.addEventListener("DOMContentLoaded", () => {
   const loginLink = document.getElementById("loginLink");
   const userInfo = document.getElementById("userInfo");
   const usernameDisplay = document.getElementById("usernameDisplay");
   const logoutBtn = document.getElementById("logoutBtn");
+  const addReviewSection = document.getElementById("addReviewSection");
 
-  if (!loginLink || !userInfo) return;
+  const loggedIn = localStorage.getItem("loggedIn") === "true";
+  const storedUser = JSON.parse(localStorage.getItem("user") || "null");
 
-  const loggedIn = localStorage.getItem("loggedIn");
-  const storedUser = localStorage.getItem("user");
+  if (loggedIn && storedUser) {
+    // Navbar frissítés
+    if (loginLink && userInfo && usernameDisplay) {
+      usernameDisplay.textContent = storedUser.username;
+      loginLink.classList.add("d-none");
+      userInfo.classList.remove("d-none");
+    }
 
-  if (loggedIn === "true" && storedUser) {
-    const user = JSON.parse(storedUser);
-    usernameDisplay.textContent = user.username;
-    loginLink.classList.add("d-none");
-    userInfo.classList.remove("d-none");
+    // Vélemény író rész megjelenítése
+    if (addReviewSection) {
+      addReviewSection.classList.remove("d-none");
+    }
+  } else {
+    // Nincs bejelentkezve
+    if (loginLink && userInfo) {
+      loginLink.classList.remove("d-none");
+      userInfo.classList.add("d-none");
+    }
+
+    if (addReviewSection) {
+      addReviewSection.classList.add("d-none");
+    }
   }
 
+  // Kijelentkezés
   logoutBtn?.addEventListener("click", () => {
     localStorage.removeItem("loggedIn");
+    localStorage.removeItem("user");
     alert("Sikeresen kijelentkeztél!");
     window.location.reload();
   });
