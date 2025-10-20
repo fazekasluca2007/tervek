@@ -15,15 +15,23 @@
   <nav class="navbar navbar-expand-lg position-relative">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <!-- bal -->
+      <!-- Bal oldal -->
       <div class="d-flex align-items-center">
         <a class="navbar-brand" href="index.html">
           <img src="./img/logo.svg" alt="Logo">
         </a>
-        <a class="nav-link ms-2" href="index.html">Bejelentkezés</a>
+
+        <!-- Alapértelmezett bejelentkezés link -->
+        <a id="loginLink" class="nav-link ms-2" href="bejelentkezes.html">Bejelentkezés</a>
+
+        <!-- Bejelentkezett felhasználó infó -->
+        <div id="userInfo" class="ms-3 d-none text-white">
+          <span id="usernameDisplay" class="fw-bold"></span>
+          <button id="logoutBtn" class="btn btn-sm btn-outline-light ms-2">Kijelentkezés</button>
+        </div>
       </div>
 
-      <!-- közép -->
+      <!-- Középső rész -->
       <div class="position-absolute start-50 translate-middle-x">
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item"><a class="nav-link" href="utjaink.html">Útjaink</a></li>
@@ -31,7 +39,7 @@
         </ul>
       </div>
 
-      <!-- jobb -->
+      <!-- Jobb oldal -->
       <div class="d-flex">
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item"><a class="nav-link" href="rolunk.html">Rólunk</a></li>
@@ -159,6 +167,7 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bejelentkezes.js"></script>
 </body>
 
 </html>
